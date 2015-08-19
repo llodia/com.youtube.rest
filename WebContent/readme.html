@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+This piece of code below in web.xml is the foundation of the application
+it s what load Jeresy framework into the application: it handles all type of http requests,
+how to rout them, provide all the functionalities
+
+<p>
+<servlet>
+  <servlet-name> Jersey REST Service </servlet-name><br>
+      <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class><br>
+      <init-param>
+         <param-name>com.sun.jersey.config.property.packages</param-name><br>
+         <param-value>com.youtube.rest</param-value> <br>
+      </init-param>
+      <load-on-startup>1</load-on-startup>  <br>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name> Jersey REST Service</servlet-name><br>
+      <url-pattern>/api/*</url-pattern><br>
+  </servlet-mapping>
+  </p>
+</body>
+</html>
